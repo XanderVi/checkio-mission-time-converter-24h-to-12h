@@ -1,0 +1,55 @@
+<!-- Describe task in general -->
+
+<p>
+  あなたは古き良き１２時間フォーマットを好んでいます。しかし、私達が暮らしている現代社会では２４時間フォーマットがより好んで使われますし、至るところで見かけます。このタスクは、次のルールに従って２４時間フォーマットの時刻を１２時間フォーマットに変換することです。
+- 出力のフォーマットは、'hh:mm a.m.'（午前）もしくは、'hh:mm p.m.' (午後)<br>
+- 時刻が１０時以前の場合 - その時刻の十の位に'０'は付けずひと桁で表します。例えば：'9:05 a.m.'のようにです。<br>
+次のリンク先で<a href='https://en.wikipedia.org/wiki/12-hour_clock'>12-hour format</a>いくつか有用な情報を見つけられます。
+</p>
+
+
+<p style="text-align: center;">
+    <img  title="Time" src="{{MEDIA}}time.png" alt="example" style="max-height: 220px"/>
+</p>
+
+
+<!-- Explain input and output values -->
+<p>
+    <strong>入力: </strong> ２４時間フォーマットの時刻(文字列型).
+</p>
+
+<p>
+    <strong>出力: </strong> １２時間フォーマットの時刻(文字列型). 
+</p>
+
+
+<!-- Put some usage examples -->
+<div class="for_info_only">
+<p>
+<strong>例:</strong>
+</p>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">timeConverter('12:30') == '12:30 p.m.'
+timeConverter('09:00') == '9:00 a.m.'
+timeConverter('23:15') == '11:15 p.m.'
+</pre>
+{% else %}
+<pre class="brush: python">time_converter('12:30') == '12:30 p.m.'
+time_converter('09:00') == '9:00 a.m.'
+time_converter('23:15') == '11:15 p.m.'
+</pre>
+{% endif %}
+</div>
+
+<!-- Here you can explain how it can be used in development and what is usage of this. -->
+<!-- The section is optional -->
+<p class="for_info_only">
+    <strong>どのように使われるか: </strong>
+    異なる時間フォーマットを扱う仕事をする際に役立ちます。
+</p>
+
+<!-- Here you can explain some constraints for input-->
+<!-- The section is optional -->
+<p><strong>事前条件</strong>:<br>
+    '00:00' <= time <= '23:59'
+</p>
